@@ -27,15 +27,12 @@ var misc = require('./misc');
 console.log("Adding %d to 10 gives us %d", misc.x, misc.addX(10));
 */
 
-var getRandomNum = require('./Mod1.js');
+var getRandomNum = require('./module1.js');
 
-var convertCurrency = require('./Mod2.js');
+var convertCurrency = require('./module2.js');
 
-module.exports.getRandomNum = {
-    getRandomNum:function(){
-    return getRandomNum(num(100, 1000000));
-  },
-  convertCurrency: function(){
-    return 'convertCurrency \n';
-  }
+var randomNum = getRandomNum(100, 1000000);
+
+module.exports = {
+    convert: convertCurrency(randomNum)
 };

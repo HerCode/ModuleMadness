@@ -15,5 +15,5 @@ function getRandomArbitrary(min, max) {
 }
 */
 module.exports = function getRandomNum(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.round(Math.random() * (max - min) + min);
 };

@@ -18,6 +18,6 @@ var number = 123456.789;
 // request a currency format
 console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
 // → 123.456,79 €*/
-modules.exports = function(num){
+module.exports = function(num){
   return num.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 };
